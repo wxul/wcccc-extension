@@ -10,6 +10,7 @@ chatArea.addEventListener('DOMNodeRemoved', e => {
             msg.avatar = n.querySelector('img.avatar').src;
             msg.fromuser = n.querySelector('img.avatar').title;
             var msgbody = n.querySelector('div.bubble_cont');
+            console.log(msgbody);
             var ngif = msgbody.getAttribute('ng-if');
 
             if (ngif.indexOf('MSGTYPE_TEXT') >= 0) {
