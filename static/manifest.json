@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "微信撤回消息查看",
+    "description": "微信撤回消息查看",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon/wechat.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://wx.qq.com/*"],
+        "js": ["page.js"]
+    }],
+    "background": {
+        "scripts": [
+            "bg.js"
+        ]
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "storage",
+        "*://wx.qq.com/*"
+    ],
+    "icons": {
+        "16": "icon/wechat.png",
+        "32": "icon/wechat.png",
+        "48": "icon/wechat.png",
+        "128": "icon/wechat.png"
+    }
+}
