@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         clear() {
-            chrome.storage.local.clear(function() {
+            chrome.storage.sync.clear(function() {
                 //do something
             });
         },
@@ -55,7 +55,7 @@ export default {
         },
         getList() {
             return new Promise((resolve, reject) => {
-                chrome.storage.local.get(null, (result) => {
+                chrome.storage.sync.get(null, (result) => {
                     resolve(result.deletedMsg);
                 });
             });
